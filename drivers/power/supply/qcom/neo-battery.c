@@ -959,7 +959,7 @@ static int neo_battery_probe(struct platform_device *pdev)
 		goto cleanup;
 	}
 
-	chip->debug_lock = wakeup_source_register("neo-battery");
+	chip->debug_lock = wakeup_source_register(NULL, "neo-battery");
 	if (!chip->debug_lock)
 		goto cleanup;
 
